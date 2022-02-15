@@ -11,7 +11,8 @@ public class Arrays : MonoBehaviour
     
     public string[] bigCats = {"Lion", "Cheetah", "Panther", "Tiger", "Leopard"};
 
-    
+    public string[] birds = {"Pigeon", "Chicken", "Canary", "Wood Pecker", "Eagle", "Swan", "Emu"};
+     
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,8 @@ public class Arrays : MonoBehaviour
         */
 
         Debug.Log(bigCats[2] + "s are actually really good at swimming.");
+
+        Debug.Log("My favorite bird is the " + birds[0]);
     }
 
     // Update is called once per frame
