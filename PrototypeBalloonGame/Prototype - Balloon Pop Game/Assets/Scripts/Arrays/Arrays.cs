@@ -12,6 +12,18 @@ public class Arrays : MonoBehaviour
     public string[] bigCats = {"Lion", "Cheetah", "Panther", "Tiger", "Leopard"};
 
     public string[] birds = {"Pigeon", "Chicken", "Canary", "Wood Pecker", "Eagle", "Swan", "Emu"};
+
+    public string[] bears = {"Black Bears", "Brown Bears", "Sun Bears", "Panda Bears"};
+
+    public string[] flowers = {"Rose", "Tulip", "Lily", "Sun flower"};
+
+    public string[] marvelHeroes = {"Captain America", "Hawk Eye", "Captain Marvel", "Iron Man", "Black Panther"};
+
+    public string[] dcHeroes = {"Batman", "Flash", "Wonder Woman", "Wolverine"};
+
+    public string[] candy = {"KitKat", "Snickers", "Smarties", "Milky Way", "Jolley Rancher"};
+
+    public string[] games = {"Witcher 3", "Life is Strange", "Sally Face", "Dying Light 2"};
      
     // Start is called before the first frame update
     void Start()
@@ -32,12 +44,27 @@ public class Arrays : MonoBehaviour
 
         Debug.Log(bigCats[2] + "s are actually really good at swimming.");
 
-        Debug.Log("My favorite bird is the " + birds[0]);
-    }
+        Debug.Log("My favorite bird is the " + birds[0] + ".");
 
+        Debug.Log(bears[2] + " are the smallest bear species.");
+
+        Debug.Log("Did you know that " + flowers[3] + "s always face the sun?");
+
+        Debug.Log("My favorite marvel super hero is " + marvelHeroes[4] + ".");
+
+        Debug.Log("I think " + dcHeroes[0] + " is super cool.");
+
+        Debug.Log("I think " + candy[0] + " are overrated." );
+
+        Debug.Log("I am obsessed with " + games[3] + " righ now.");
+    
+    }
+   
     // Update is called once per frame
     void Update()
     {
         
     }
+
 }
+
