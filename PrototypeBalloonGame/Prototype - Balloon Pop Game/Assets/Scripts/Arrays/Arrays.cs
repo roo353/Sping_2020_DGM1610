@@ -56,7 +56,7 @@ public class Arrays : MonoBehaviour
 
         Debug.Log("I think " + candy[0] + " are overrated." );
 
-        Debug.Log("I am obsessed with " + games[3] + " righ now.");
+        Debug.Log("I am obsessed with " + games[3] + " right now.");
     
     }
    
