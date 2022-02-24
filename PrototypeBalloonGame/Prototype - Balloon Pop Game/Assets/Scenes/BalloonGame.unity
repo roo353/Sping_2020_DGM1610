@@ -123,74 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &426008391 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5114784495205090119, guid: a69fc398e460d2044a0aa3c30685421e, type: 3}
-  m_PrefabInstance: {fileID: 6259657084038619201}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &426008392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426008391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7dbd41650569b74bb3ae402a8f25868, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreToGive: 100
-  clicksToPop: 3
-  scaleToIncrease: 0.1
-  scoreManager: {fileID: 1330142792}
---- !u!114 &426008397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426008391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6aa4223e8a321547ad3ff8ba05971db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
---- !u!1 &631791859 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6305438831836079010, guid: ecc482499d15d034592735df70f0f36f, type: 3}
-  m_PrefabInstance: {fileID: 6305438831242068817}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &631791864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631791859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7dbd41650569b74bb3ae402a8f25868, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreToGive: 100
-  clicksToPop: 3
-  scaleToIncrease: 0.1
-  scoreManager: {fileID: 1330142792}
---- !u!114 &631791865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631791859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6aa4223e8a321547ad3ff8ba05971db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!1 &740451838
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,40 +397,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1149846287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2969947308860701601, guid: b25ba18be8f9bb641a40a6f99b8908f4, type: 3}
-  m_PrefabInstance: {fileID: 951859599751198773}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1149846288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149846287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7dbd41650569b74bb3ae402a8f25868, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreToGive: 100
-  clicksToPop: 3
-  scaleToIncrease: 0.1
-  scoreManager: {fileID: 1330142792}
---- !u!114 &1149846293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149846287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6aa4223e8a321547ad3ff8ba05971db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!1 &1330142791
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330142791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 196.28455, y: 183.6566, z: -74.88253}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -687,10 +585,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1632194950}
+  - component: {fileID: 1632194951}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -702,12 +601,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632194949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 198.92757, y: 181.21219, z: -146.0902}
+  m_LocalPosition: {x: 0, y: 4.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632194951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632194949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e82449604931f43b590cf2d14b95b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonPrefabs:
+  - {fileID: 5114784495205090119, guid: a69fc398e460d2044a0aa3c30685421e, type: 3}
+  - {fileID: 2969947308860701601, guid: b25ba18be8f9bb641a40a6f99b8908f4, type: 3}
+  - {fileID: 6305438831836079010, guid: ecc482499d15d034592735df70f0f36f, type: 3}
+  balloonIndex: 0
+  startDelay: 0.5
+  spawnInterval: 1.5
 --- !u!1 &1683548330
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +799,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1149846288, guid: b25ba18be8f9bb641a40a6f99b8908f4, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1330142792}
     - target: {fileID: 790325085287653504, guid: b25ba18be8f9bb641a40a6f99b8908f4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -938,6 +860,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 426008392, guid: a69fc398e460d2044a0aa3c30685421e, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1330142792}
     - target: {fileID: 1815757174778585234, guid: a69fc398e460d2044a0aa3c30685421e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -995,6 +921,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 631791864, guid: ecc482499d15d034592735df70f0f36f, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1330142792}
     - target: {fileID: 6305438831836079010, guid: ecc482499d15d034592735df70f0f36f, type: 3}
       propertyPath: m_Name
       value: Red_Balloon

@@ -6,23 +6,24 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] balloonPrefabs;
     public int balloonIndex;
+    public float startDelay = 0.5f;
+    public float spawnInterval = 1.5f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("SpawnRandomBalloon", startDelay, spawnInterval);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void SpawnRandomBalloon()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-5,5),10,0);
+        // Get a random position on the x-axis
+        Vector3 spawnPos = new Vector3(Random.Range(-5,5),5,0);
+        // Pick a random balloon from the balloonPrefab array
         int balloonIndex = Random.Range(0,balloonPrefabs.Length);
-        Instantiate(balloonPrefabs[balloonIndex], spawnPos, balloonPrefabs[balloonIndex].translate.rotation);
+        // Spawn random balloon at spawn position 
+        Instantiate(balloonPrefabs[balloonIndex], spawnPos, balloonPrefabs[balloonIndex].transform.rotation);
+
     }
 }
