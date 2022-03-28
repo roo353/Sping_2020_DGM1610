@@ -12,6 +12,9 @@ public class Switches : MonoBehaviour
     public string friendConv;
     public int emotions;
     public float food;
+    public int dinnerConv;
+
+    public string teacherConv;
 
     void Start()
     {
@@ -184,6 +187,43 @@ public class Switches : MonoBehaviour
 
             case 1.0f:
             Debug.Log("You have chosen the taco");
+            break;
+        }
+
+        switch (dinnerConv)
+        {
+            case 3:
+            print("You and your family talk about the day");
+            break;
+
+            case 2:
+            print("You and your family compliment the food");
+            break;
+
+            case 1:
+            print("You and your family argue");
+            break;
+
+            case 0:
+            print("You and your family sit in silence");
+        }
+
+        switch (teacherConv)
+        {
+            case "Have you done your homework?":
+             print("Yes");
+            break;
+
+            case "May I use the restroom?":
+             print("Yes you may");
+            break;
+
+            case "Please stop talking among yourselfs":
+             print("the class becomes quiet");
+            break;
+
+            case "This assignemt is due next monday":
+             print("Yes maam");
             break;
         }
     }  
