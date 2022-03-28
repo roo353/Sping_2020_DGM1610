@@ -9,6 +9,9 @@ public class Switches : MonoBehaviour
     public int pickingPets;
     public string favoriteColor;
     public float playerLevels;
+    public string friendConv;
+    public int emotions;
+    public float food;
 
     void Start()
     {
@@ -123,7 +126,66 @@ public class Switches : MonoBehaviour
             Debug.Log("You must level up to gain access to better items");
             break;
         }
-    
+
+        switch (friendConv)
+        {
+            case "Hey! How have you been?":
+             print("Ive been great, thank you.");
+            break;
+
+            case "See you later!":
+             print("Cant wait!");
+            break;
+
+            case "Anything od note happen recently?":
+             print("Nah not really");
+            break;
+
+            case "Would you like some snacks?"
+             print("Of course!");
+            break;
+        }
+
+        switch (emotions)
+        {
+            case 3:
+            Debug.Log("You are feeling angry");
+            break;
+
+            case 2:
+            Debug.Log("You are feelind sad");
+            break;
+
+            case 1:
+            Debug.Log("You are feeling happy");
+            break;
+
+            case 0:
+            Debug.Log("You are excited");
+            break;
+
+            default:
+            Debug.Log("You are in a neutral mood");
+        }
+
+         switch (food)
+        {
+            case 4.0f:
+            Debug.Log("You have chosen the ramen");
+            break;
+
+            case 3.0f:
+            Debug.Log("You have chosen the mac and cheese");
+            break;
+
+            case 2.0f:
+            Debug.Log("You have chosen the burger");
+            break;
+
+            case 1.0f:
+            Debug.Log("You have chosen the taco");
+            break;
+        }
     }  
 
       /*if()    //switches are a less messy and easier way than nesting else if statements
