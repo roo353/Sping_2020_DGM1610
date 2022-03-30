@@ -10,9 +10,37 @@ public class Enums : MonoBehaviour
     enum CarModel {Alero, Cruze ,Tacoma, Mustang, Miata, Viper, Cherokee}
     */
 
+    enum HairColor {blonde, ginger, brown, black, gray};
+    enum EyeColor {blue, hazel, brown, green};
+    enum Gender {woman, man, nonBinary, transWoman, transMan};
+    enum Accesories {glasses, hat, braces, necklace, backpack,};
+    enum Pet {cat, dog, turtle, bird, lizard, spider, snake};
+    enum SkinTone {white, mediumBrown, olive, brown, darkBrown};
+    enum Expression {happy, angry, sad, excited, listless, resting};
+
     // Start is called before the first frame update
-    void Start()
+    async void Start()
     {
+
+        HairColor hair;
+        EyeColor eyes;
+        Gender gender;
+        Accesories addition;
+        Pet companion;
+        SkinTone skin;
+        Expression look;
+
+        hair = HairColor.brown;
+        eyes = EyeColor.green;
+        gender = Gender.woman;
+        addition = Accesories.glasses;
+        companion = Pet.dog;
+        skin = SkinTone.white;
+        look = Expression.listless;
+
+        print("Your new charcter has " + hair + " hair and " + eyes + " eyes. They are a " + skin + gender + " with a pet " + companion + ". They wear " + addition + " and always have a " + look + " expression.");
+
+
         /*
         Color paint; 
         paint = Color.red;
