@@ -1,14 +1,14 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enums : MonoBehaviour
 {
-    /*
+    
     enum Color {blue, red, yellow, green, orange, purple}; //can be in or outside of class
     enum CarMake {Oldsmobile, Chevrolet, Ford, Masda, Toyota, Dodge, Jeep};
     enum CarModel {Alero, Cruze ,Tacoma, Mustang, Miata, Viper, Cherokee}
-    */
+    
 
     enum HairColor {blonde, ginger, brown, black, gray};
     enum EyeColor {blue, hazel, brown, green};
@@ -41,7 +41,7 @@ public class Enums : MonoBehaviour
         print("Your new charcter has " + hair + " hair and " + eyes + " eyes. They are a " + skin + gender + " with a pet " + companion + ". They wear " + addition + " and always have a " + look + " expression.");
 
 
-        /*
+        
         Color paint; 
         paint = Color.red;
 
@@ -57,7 +57,7 @@ public class Enums : MonoBehaviour
         Debug.Log("Car Manufacture:" + make + " Model:" + model);
 
         Recall(CarMake.Masda, CarModel.Miata);
-        */
+        
     }
 
     // Update is called once per frame
@@ -66,7 +66,7 @@ public class Enums : MonoBehaviour
         
     }
 
-    /*
+    
     void Recall(CarMake make, CarModel model)
     {
         /*if(make == CarMake.Oldsmobile && model == CarModel.Alero)
@@ -82,5 +82,6 @@ public class Enums : MonoBehaviour
             print("There is no recall notice for your vehicle.");
         }       
     }
-    */
+    
 }
+*/

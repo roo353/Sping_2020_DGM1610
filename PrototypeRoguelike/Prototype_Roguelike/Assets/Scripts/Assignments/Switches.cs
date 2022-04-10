@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -228,7 +228,7 @@ public class Switches : MonoBehaviour
         }
     }  
 
-      /*if()    //switches are a less messy and easier way than nesting else if statements
+        if()    //switches are a less messy and easier way than nesting else if statements
         {
             if()
             {
@@ -237,6 +237,7 @@ public class Switches : MonoBehaviour
 
                 }
             }
-        }*/
+        }
 
 }
+*/
