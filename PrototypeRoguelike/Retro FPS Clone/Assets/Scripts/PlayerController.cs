@@ -41,19 +41,25 @@ public class PlayerController : MonoBehaviour
       mouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y") * mouseSensitivity);
       transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - mouseInput.x, transform.rotation.eulerAngles.z);
 
-      if(currentAmmo > 0)
+      if(Input.GetMouseButtonDown(0))
       {
-        Ray ray = viewCam.ViewportPointToRay(new Vector3(0.5f, 0.5f,0f));
-        RaycastHit hit;
+        if(currentAmmo > 0)
+        {
+          Ray ray = viewCam.ViewportPointToRay(new Vector3(0.5f, 0.5f,0f));
+          RaycastHit hit;
 
-        if( Physics.Raycast(ray, out hit))
-        {
-          Debug.Log("Im looking " + hit.transform.name);
-          Instantiate(bulletImpact, hit.point, transform.rotation);
-        }
-        else
-        {
-          Debug.Log("I'm not looking at anything");
+          if( Physics.Raycast(ray, out hit))
+          {
+            Debug.Log("Im looking " + hit.transform.name);
+            Instantiate(bulletImpact, hit.point, transform.rotation);
+          }
+          else
+          {
+            Debug.Log("I'm not looking at anything");
+          }
+
+          currentAmmo --;
+
         }
       }
     }
