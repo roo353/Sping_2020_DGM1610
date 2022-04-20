@@ -46,8 +46,11 @@ public class PlayerController : MonoBehaviour
         }
         //Moves the character left and right
         rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
+    }
 
-        //checks for input from and assigns jump to space bar
+    void Update()
+    {
+         //checks for input from and assigns jump to space bar
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Jump();
