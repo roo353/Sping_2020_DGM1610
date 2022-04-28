@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class EnemyPatrol : MonoBehaviour
 {
 
+    [Header("Movement")]
     public float speed;
     public float distance;
-
     private bool moveRight = true;
 
+    [Header("Ground Detection")]
     public Transform groundDetection;
+
+    [Header("Attack")]
+    public int damage;
+    public float attackRange;
+    public float attackRate;
+    private float lastAttackTime;
+    public PlayerController playerCharacter;
 
     // Update is called once per frame
     void Update()
@@ -39,5 +46,17 @@ public class EnemyPatrol : MonoBehaviour
                 moveRight = true;
             }
         }
+
+        if(Time.time - lastAttackTime >= attackRate && Vector2.Distance(transform.position, playerCharacter.transform.position) < attackRange)
+        {
+            Attack();
+        }
     }
+
+    void Attack()
+    {
+        lastAttackTime =Time.time;
+        playerCharacter.TakeDamage(damage);
+    }
+
 }

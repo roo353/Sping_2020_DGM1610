@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,8 +15,30 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
-
     private float moveVelocity;
+
+    [Header("Sound")]
+    private AudioSource source;
+    public AudioClip soundEffect;
+    public float volume = 1.0f;
+
+    [Header("Key")]
+    public int key;
+
+    [Header("Health")]
+    public int curHP;
+    public int maxHP;
+    public HealthBar healthBar;
+
+    [Header("Attack")]
+    public float attackRange; //range of attacking
+    public float attackRate; //rate of attack
+    private float lastAttackTime;
+    public LayerMask enemyLayer;
+    public int damage;
+    private Vector2 direction;
+
+    public int sceneToLoad;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +46,11 @@ public class PlayerController : MonoBehaviour
         //gets rigidbody for us
         isGrounded = true;
         rb = GetComponent<Rigidbody2D>();   
+
+        source = GetComponent<AudioSource>();
+
+        curHP = maxHP;
+        healthBar.SetHealth(maxHP);
     }
 
     //FixedUpdate happens per certain ammount of frames
@@ -55,11 +83,49 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(Time.time - lastAttackTime >- attackRate)
+            {
+                Attack();
+            }
+        }
     }
 
     public void Jump()
     {
         //maintaining velocity on x and changing 
         rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+
+        source.PlayOneShot(soundEffect, volume);
+    }
+
+    void Attack()
+    {
+        lastAttackTime = Time.time;
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, attackRange, enemyLayer);
+
+        if(hit.collider != null)
+        {
+            hit.collider.GetComponent<Boss>()?.TakeDamage(damage);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        curHP -= damage;
+        healthBar.SetHealth(curHP);
+
+        if(curHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+      SceneManager.LoadScene(sceneToLoad);
     }
 }
