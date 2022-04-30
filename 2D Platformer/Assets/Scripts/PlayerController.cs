@@ -30,14 +30,6 @@ public class PlayerController : MonoBehaviour
     public int maxHP;
     public HealthBar healthBar;
 
-    [Header("Attack")]
-    public float attackRange; //range of attacking
-    public float attackRate; //rate of attack
-    private float lastAttackTime;
-    public LayerMask enemyLayer;
-    public int damage;
-    private Vector2 direction;
-
     public int sceneToLoad;
 
     // Start is called before the first frame update
@@ -79,17 +71,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
          //checks for input from and assigns jump to space bar
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if(Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             Jump();
-        }
-
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            if(Time.time - lastAttackTime >- attackRate)
-            {
-                Attack();
-            }
         }
     }
 
@@ -99,18 +83,6 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
 
         source.PlayOneShot(soundEffect, volume);
-    }
-
-    void Attack()
-    {
-        lastAttackTime = Time.time;
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, attackRange, enemyLayer);
-
-        if(hit.collider != null)
-        {
-            hit.collider.GetComponent<Boss>()?.TakeDamage(damage);
-        }
     }
 
     public void TakeDamage(int damage)
